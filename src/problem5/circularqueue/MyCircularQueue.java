@@ -25,7 +25,7 @@ public class MyCircularQueue {
     boolean isEmpty()
     {
         boolean response=false;
-        if(front==rear)
+        if(front==null)
         {
             response=true;
         }
