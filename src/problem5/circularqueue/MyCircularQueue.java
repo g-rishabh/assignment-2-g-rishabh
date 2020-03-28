@@ -52,6 +52,33 @@ public class MyCircularQueue {
     }
     public void process()
     {
+      int counter=size;
+        while(counter>0)
+        {
+            counter--;
+            Student s=front.getData();
+            if(s.getBackLog()-s.getAppearingCount() <= 0 )
+            {
+                rear.setNext(front.getNext());
+                front=front.getNext();
+            }
+            else
+            {
+                front = front.getNext();
+                rear = rear.getNext();
+            }
 
+      }
 }
+public void display()
+    {
+        Node temp = front;
+        System.out.println();
+        while(temp.getNext()!=front)
+        {
+            System.out.println(temp.getData());
+            temp = temp.getNext();
+        }
+        System.out.println(temp.getData());
+    }
 }
