@@ -57,7 +57,7 @@ public class MyPriorityQueue {
                 Node temp = front;
                 while (temp.getNext() != null)
                 {
-                    if (temp.getStudent().getRollNo() < element.getRollNo())
+                    if (temp.getStudent().getRollNo() > element.getRollNo())
                     {
                         break;
                     }
